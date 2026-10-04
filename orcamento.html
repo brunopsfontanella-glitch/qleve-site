@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Orçamento · Qleve Fiber</title>
+  <meta name="description" content="Solicite orçamento de postes em PRFV Qleve Fiber: aplicação, comprimento, carga, topo, quantidade e local de entrega.">
+  <link rel="icon" href="assets/logo/qleve-fiber-simbolo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="orcamento">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <div id="site-header"></div>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Home</a> / Orçamento</nav>
+        <span class="eyebrow">Orçamento</span>
+        <h1>Peça um orçamento</h1>
+        <span class="bar"></span>
+        <p class="lead">Preencha o que souber. Campos técnicos em branco podem ser definidos depois com a nossa engenharia.</p>
+      </div>
+    </section>
+
+    <section class="section section--gelo">
+      <div class="container layout-aside">
+        <form class="form form-box" id="form-orcamento" novalidate>
+          <fieldset>
+            <legend>1. Seus dados</legend>
+            <div class="row row-2">
+              <div class="field"><label for="nome">Nome</label><input id="nome" name="nome" autocomplete="name" required></div>
+              <div class="field"><label for="empresa">Empresa / órgão</label><input id="empresa" name="empresa" autocomplete="organization" required></div>
+            </div>
+            <div class="row row-2">
+              <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+              <div class="field"><label for="telefone">Telefone / WhatsApp</label><input id="telefone" name="telefone" type="tel" autocomplete="tel" required></div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Aplicação</legend>
+            <div class="field">
+              <label for="segmento">Segmento</label>
+              <select id="segmento" name="segmento">
+                <option value="">Selecione</option>
+                <option value="energy">Qleve Energy · rede de distribuição de energia</option>
+                <option value="urban">Qleve Urban · iluminação pública e urbanismo</option>
+                <option value="connect">Qleve Connect · CFTV, cercamento, cidades inteligentes</option>
+                <option value="industrial">Qleve Industrial · indústria, porto, saneamento, rodovia, litoral</option>
+                <option value="outro">Outra aplicação</option>
+              </select>
+            </div>
+            <div class="field">
+              <span class="field-label" id="topo-l">Topo</span>
+              <div class="choice" role="radiogroup" aria-labelledby="topo-l">
+                <input type="radio" id="topo-c" name="topo" value="Circular"><label for="topo-c">Circular</label>
+                <input type="radio" id="topo-q" name="topo" value="Quadrado"><label for="topo-q">Quadrado</label>
+                <input type="radio" id="topo-n" name="topo" value="A definir" checked><label for="topo-n">A definir</label>
+              </div>
+            </div>
+            <div class="row row-3">
+              <div class="field">
+                <label for="comprimento">Comprimento</label>
+                <select id="comprimento" name="comprimento">
+                  <option value="">A definir</option>
+                  <option>4 m</option><option>6 m</option><option>8 m</option>
+                  <option>9 m</option><option>10 m</option><option>11 m</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="carga">Carga nominal</label>
+                <select id="carga" name="carga">
+                  <option value="">A definir</option>
+                  <option>150 daN</option><option>300 daN</option><option>600 daN</option>
+                  <option>Outra</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="quantidade">Quantidade</label>
+                <input id="quantidade" name="quantidade" type="number" min="1" inputmode="numeric" placeholder="ex.: 200">
+              </div>
+            </div>
+            <div class="field">
+              <label for="modelo">Modelo de referência <span class="opt">(opcional)</span></label>
+              <input id="modelo" name="modelo" placeholder="ex.: PFC 10-300">
+              <p class="hint muted">Consulte os modelos em <a href="produtos.html">Produtos</a>.</p>
+            </div>
+            <div class="row row-2">
+              <div class="field"><label for="padrao">Padrão da distribuidora <span class="opt">(opcional)</span></label><input id="padrao" name="padrao" placeholder="ex.: norma ou padrão a seguir"></div>
+              <div class="field"><label for="acessorios">Acessórios <span class="opt">(opcional)</span></label><input id="acessorios" name="acessorios" placeholder="furação, fixações, braço, suporte..."></div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Entrega</legend>
+            <div class="row row-2">
+              <div class="field"><label for="local">Cidade / estado / país de entrega</label><input id="local" name="local" placeholder="ex.: Pelotas/RS, Brasil"></div>
+              <div class="field"><label for="prazo">Prazo e cronograma <span class="opt">(opcional)</span></label><input id="prazo" name="prazo" placeholder="ex.: 3 entregas a partir de março/2027"></div>
+            </div>
+            <div class="field">
+              <label for="mensagem">Observações <span class="opt">(opcional)</span></label>
+              <textarea id="mensagem" name="mensagem" placeholder="Licitação, condições de acesso à obra, descarga..."></textarea>
+            </div>
+          </fieldset>
+
+          <p class="form-msg" id="form-msg" role="alert"></p>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit" data-via="whatsapp">Enviar pelo WhatsApp</button>
+            <button class="btn btn--outline" type="submit" data-via="email">Enviar por e-mail</button>
+          </div>
+          <p class="muted mb-0" style="font-size:.8rem">O envio abre o WhatsApp ou o seu programa de e-mail com a mensagem pronta. Nenhum dado fica armazenado no site.</p>
+        </form>
+
+        <aside class="aside-box">
+          <h3>Cinco informações para receber sua proposta</h3>
+          <ol class="steps steps--dark">
+            <li><h3>Aplicação</h3><p>Distribuição, iluminação, CFTV ou industrial.</p></li>
+            <li><h3>Comprimento e carga</h3><p>Ou o padrão da distribuidora a seguir.</p></li>
+            <li><h3>Topo e acessórios</h3><p>Circular ou quadrado, furação e fixações.</p></li>
+            <li><h3>Quantidade e prazo</h3><p>Volume total e cronograma de entregas.</p></li>
+            <li><h3>Local de entrega</h3><p>Cidade e condições de acesso à obra.</p></li>
+          </ol>
+          <p class="mb-0" style="margin-top:18px">Prefere falar direto?<br><a href="https://wa.me/5551980172774" target="_blank" rel="noopener" style="color:var(--verde-claro);font-weight:600">WhatsApp (51) 98017-2774</a><br><a href="mailto:contato@qlevefiber.com.br" style="color:#fff">contato@qlevefiber.com.br</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/site.js"></script>
+  <script src="js/orcamento.js"></script>
+</body>
+</html>
