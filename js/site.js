@@ -86,6 +86,7 @@
         { href: "qualidade.html#ensaios", label: "Ensaios", sub: "Conforme ABNT NBR 16989:2021" }
       ]
     },
+    { id: "blog", href: "blog.html", label: "Blog" },
     { id: "contato", href: "contato.html", label: T.contact }
   ];
 
