@@ -17,7 +17,8 @@ Site estático (HTML + CSS + JS, sem build). Abra `index.html` com duplo clique 
 
 ## Onde editar
 - **Menu, rodapé, WhatsApp, e-mail e endereço:** `js/site.js` (objetos `CONFIG` e `NAV`). Vale para todas as páginas.
-- **Faixa "versão modelo" no topo:** `CONFIG.showDraftNote` em `js/site.js`.
+- **Modo publicação:** `CONFIG.modoPublicacao` em `js/site.js`. Em `true` (atual), o site esconde tudo o que ainda não tem dado e tira a faixa "versão modelo". Em `false`, mostra o modelo completo com os selos amarelos, para revisão interna.
+- **Esconder um trecho sem dado:** acrescente `data-pendente` ao elemento (linha, célula, cartão, seção). Para mostrar "Sob consulta" no lugar do selo, use `<span class="tbd" data-publico="Sob consulta">a definir</span>`. Quando o dado chegar, preencha e retire a marcação.
 - **Cores e estilos:** variáveis no topo de `css/style.css`.
 - **Formulário de orçamento:** `js/orcamento.js`. Aceita pré-preenchimento: `orcamento.html?segmento=energy&modelo=PFC%2010-300`.
 
