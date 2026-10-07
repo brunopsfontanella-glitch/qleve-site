@@ -22,12 +22,12 @@ Site estático (HTML + CSS + JS, sem build). Abra `index.html` com duplo clique 
 - **Formulário de orçamento:** `js/orcamento.js`. Aceita pré-preenchimento: `orcamento.html?segmento=energy&modelo=PFC%2010-300`.
 
 ## Blog: como publicar um artigo
-1. Copie  para  (ex.: ) e troque título, resumo, data, categoria e o texto.
-2. Coloque a capa em  (JPG, proporção ~1,9:1, ex. 1200×630). O LinkedIn não exibe bem WebP na prévia.
-3. Adicione o artigo no topo de . A listagem, o bloco da home e o "Leia também" se atualizam sozinhos.
+1. Copie `blog/_modelo.html` para `blog/<slug>.html` (ex.: `blog/postes-no-litoral.html`) e troque título, resumo, data, categoria e o texto.
+2. Coloque a capa em `assets/blog/<slug>.jpg` (JPG, proporção ~1,9:1, ex. 1200×630). O LinkedIn não exibe bem WebP na prévia.
+3. Adicione o artigo no topo de `js/posts.js`. A listagem, o bloco da home e o "Leia também" se atualizam sozinhos.
 4. Publique (git push). Para compartilhar, use o botão LinkedIn dentro do artigo.
 
-As tags Open Graph usam o endereço completo do site (). Ao mudar para o domínio definitivo, trocar esse endereço nos arquivos de  e em .
+As tags Open Graph usam o endereço completo do site (`https://brunopsfontanella-glitch.github.io/qleve-site/`). Ao mudar para o domínio definitivo, trocar esse endereço nos arquivos de `blog/` e em `blog.html`.
 
 ## Marcações do modelo
 - <span>`a preencher` / `a definir`</span> (selo amarelo): dado ainda não fornecido (peso, engastamento, laudos, vida útil, linha PU etc.).
