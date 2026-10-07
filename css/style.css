@@ -564,3 +564,5 @@ td.num { font-variant-numeric: tabular-nums; }
 .post-figure figcaption { font-size: .82rem; color: var(--cinza); margin-top: 8px; }
 .post-author { display: flex; gap: 16px; align-items: center; margin-top: 40px; padding: 22px; background: var(--gelo); border-radius: var(--radius); font-size: .92rem; }
 .post-author img { width: 44px; height: auto; flex-shrink: 0; }
+.img-connect { height: auto; max-height: 560px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 45%; background: #2a6fd0; }
+@media (max-width: 899px) { .img-connect { aspect-ratio: 4 / 3; max-height: none; } }
