@@ -13,7 +13,7 @@ Site estático (HTML + CSS + JS, sem build). Abra `index.html` com duplo clique 
 | `qualidade.html` | Processo em 8 etapas, controles, ensaios |
 | `orcamento.html` | Formulário que abre WhatsApp ou e-mail (sem backend) |
 | `contato.html` | Dados de contato e mapa |
-| `blog.html` + `blog/*.html` | Blog: listagem com filtro por categoria e uma página por artigo |
+| `insights.html` + `insights/*.html` | Insights Qleve Fiber: listagem com filtro por categoria e uma página por artigo |
 
 ## Onde editar
 - **Menu, rodapé, WhatsApp, e-mail e endereço:** `js/site.js` (objetos `CONFIG` e `NAV`). Vale para todas as páginas.
@@ -21,13 +21,13 @@ Site estático (HTML + CSS + JS, sem build). Abra `index.html` com duplo clique 
 - **Cores e estilos:** variáveis no topo de `css/style.css`.
 - **Formulário de orçamento:** `js/orcamento.js`. Aceita pré-preenchimento: `orcamento.html?segmento=energy&modelo=PFC%2010-300`.
 
-## Blog: como publicar um artigo
-1. Copie `blog/_modelo.html` para `blog/<slug>.html` (ex.: `blog/postes-no-litoral.html`) e troque título, resumo, data, categoria e o texto.
-2. Coloque a capa em `assets/blog/<slug>.jpg` (JPG, proporção ~1,9:1, ex. 1200×630). O LinkedIn não exibe bem WebP na prévia.
+## Insights: como publicar um artigo
+1. Copie `insights/_modelo.html` para `insights/<slug>.html` (ex.: `insights/postes-no-litoral.html`) e troque título, resumo, data, categoria e o texto.
+2. Coloque a capa em `assets/insights/<slug>.jpg` (JPG, proporção ~1,9:1, ex. 1200×630). O LinkedIn não exibe bem WebP na prévia.
 3. Adicione o artigo no topo de `js/posts.js`. A listagem, o bloco da home e o "Leia também" se atualizam sozinhos.
 4. Publique (git push). Para compartilhar, use o botão LinkedIn dentro do artigo.
 
-As tags Open Graph usam o endereço completo do site (`https://brunopsfontanella-glitch.github.io/qleve-site/`). Ao mudar para o domínio definitivo, trocar esse endereço nos arquivos de `blog/` e em `blog.html`.
+As tags Open Graph usam o endereço completo do site (`https://brunopsfontanella-glitch.github.io/qleve-site/`). Ao mudar para o domínio definitivo, trocar esse endereço nos arquivos de `insights/` e em `insights.html`.
 
 ## Marcações do modelo
 - <span>`a preencher` / `a definir`</span> (selo amarelo): dado ainda não fornecido (peso, engastamento, laudos, vida útil, linha PU etc.).

@@ -1,5 +1,5 @@
 /* =========================================================
-   Blog — monta a listagem, o bloco da home e, dentro de cada
+   Insights — monta a listagem, o bloco da home e, dentro de cada
    artigo, os botões de compartilhar e os "leia também".
    Depende de js/posts.js (carregar antes).
    ========================================================= */
@@ -11,7 +11,7 @@
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function fmtDate(iso) { var p = iso.split("-"); return parseInt(p[2], 10) + " " + MESES[parseInt(p[1], 10) - 1] + " " + p[0]; }
-  function postUrl(p) { return root + "blog/" + p.slug + ".html"; }
+  function postUrl(p) { return root + "insights/" + p.slug + ".html"; }
 
   function card(p, featured) {
     return '<article class="post-card' + (featured ? " post-card--featured" : "") + ' reveal in">' +
@@ -24,9 +24,9 @@
       "</div></article>";
   }
 
-  // ---- Listagem (blog.html) ----
-  var list = document.getElementById("blog-list");
-  var filters = document.getElementById("blog-filters");
+  // ---- Listagem (insights.html) ----
+  var list = document.getElementById("insights-list");
+  var filters = document.getElementById("insights-filters");
   if (list) {
     var cats = ["Todos"].concat(posts.map(function (p) { return p.category; }).filter(function (c, i, a) { return a.indexOf(c) === i; }));
     var current = "Todos";
@@ -51,7 +51,7 @@
   }
 
   // ---- Bloco "últimos artigos" (home) ----
-  var home = document.getElementById("home-blog");
+  var home = document.getElementById("home-insights");
   if (home) home.innerHTML = posts.slice(0, 3).map(function (p) { return card(p, false); }).join("");
 
   // ---- Página de artigo ----

@@ -1,8 +1,8 @@
 /* =========================================================
-   Lista de artigos do blog — o mais recente primeiro.
+   Lista de artigos dos Insights — o mais recente primeiro.
    Para publicar um artigo novo:
-   1. Copie blog/_modelo.html para blog/<slug>.html e escreva o texto.
-   2. Coloque a capa (JPG, ~1200×630) em assets/blog/<slug>.jpg.
+   1. Copie insights/_modelo.html para insights/<slug>.html e escreva o texto.
+   2. Coloque a capa (JPG, ~1200×630) em assets/insights/<slug>.jpg.
    3. Adicione um item no topo da lista abaixo.
    ========================================================= */
 window.QLEVE_POSTS = [
@@ -13,7 +13,7 @@ window.QLEVE_POSTS = [
     category: "Materiais",
     date: "2026-10-07",
     minutes: 4,
-    cover: "assets/blog/prfv-concreto-aco.jpg",
+    cover: "assets/insights/prfv-concreto-aco.jpg",
     coverAlt: "Superfície de poste em PRFV logo após o enrolamento filamentar"
   },
   {
@@ -23,7 +23,7 @@ window.QLEVE_POSTS = [
     category: "Normas",
     date: "2026-10-07",
     minutes: 5,
-    cover: "assets/blog/nbr-16989-ensaios.jpg",
+    cover: "assets/insights/nbr-16989-ensaios.jpg",
     coverAlt: "Linha de enrolamento filamentar da Qleve Fiber com mandris e enroladeira"
   },
   {
@@ -33,7 +33,7 @@ window.QLEVE_POSTS = [
     category: "Fabricação",
     date: "2026-10-07",
     minutes: 4,
-    cover: "assets/blog/enrolamento-filamentar.jpg",
+    cover: "assets/insights/enrolamento-filamentar.jpg",
     coverAlt: "Rack de roving de fibra de vidro alimentando a linha de enrolamento"
   }
 ];
