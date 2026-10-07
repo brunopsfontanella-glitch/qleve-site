@@ -8,7 +8,12 @@
 
   // ---- Configuração geral -------------------------------------------------
   var CONFIG = {
-    // Faixa "versão modelo" no topo. Desligar (false) na versão final.
+    // Modo publicação (true): esconde tudo o que ainda não tem dado
+    // (marcado com data-pendente ou com o selo "a preencher"), troca
+    // "a definir" por "Sob consulta" onde houver data-publico e tira a
+    // faixa "versão modelo". false: mostra o modelo completo para revisão.
+    modoPublicacao: true,
+    // Faixa "versão modelo" no topo (só aparece fora do modo publicação).
     showDraftNote: true,
     whatsapp: "5551980172774",
     whatsappLabel: "(51) 98017-2774",
@@ -134,7 +139,7 @@
   }
 
   var headerHTML =
-    (CONFIG.showDraftNote ? '<div class="draft-note">' + T.draft + "</div>" : "") +
+    (CONFIG.showDraftNote && !CONFIG.modoPublicacao ? '<div class="draft-note">' + T.draft + "</div>" : "") +
     '<header class="site-header"><div class="container header-inner">' +
     '<a class="brand" href="' + url("index.html") + '"><img src="' + url("assets/logo/qleve-fiber-logo.png") + '" alt="Qleve Fiber" width="89" height="46"></a>' +
     desktopNav() +
@@ -157,7 +162,7 @@
     '<li><a href="' + waLink() + '" target="_blank" rel="noopener">WhatsApp ' + CONFIG.whatsappLabel + "</a></li>" +
     '<li><a href="mailto:' + CONFIG.email + '">' + CONFIG.email + "</a></li>" +
     "<li>" + CONFIG.hours + "</li>" +
-    '<li>LinkedIn · Instagram <span class="tbd">a preencher</span></li></ul></div>' +
+    '<li data-pendente>LinkedIn · Instagram <span class="tbd">a preencher</span></li></ul></div>' +
     "</div>" +
     '<div class="footer-bottom"><span>© ' + new Date().getFullYear() + " Qleve Fiber Indústria de Transformação Ltda. " + T.rights + "</span><span>qlevefiber.com.br</span></div>" +
     "</div></footer>";
@@ -173,6 +178,17 @@
   if (f) f.outerHTML = footerHTML;
   body.insertAdjacentHTML("beforeend", waHTML);
   document.documentElement.classList.remove("no-js");
+
+  // ---- Modo publicação: some com o que ainda não tem dado ----------------
+  if (CONFIG.modoPublicacao) {
+    document.documentElement.classList.add("publico");
+    document.querySelectorAll("[data-pendente]").forEach(function (el) { el.remove(); });
+    document.querySelectorAll(".tbd").forEach(function (el) {
+      var txt = el.getAttribute("data-publico");
+      if (txt) el.replaceWith(document.createTextNode(txt));
+      else el.remove();
+    });
+  }
 
   // Expor para outras páginas (formulário de orçamento)
   window.QLEVE = { config: CONFIG, waLink: waLink, lang: LANG };

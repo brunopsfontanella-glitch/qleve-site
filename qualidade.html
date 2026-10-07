@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261007c">
+  <link rel="stylesheet" href="css/style.css?v=20261007d">
 </head>
 <body data-page="qualidade">
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -97,14 +97,14 @@
             <h3>No poste</h3>
             <div class="table-wrap">
             <table style="min-width:420px">
-              <thead><tr><th>Ensaio</th><th>Critério da norma</th><th>Laudo</th></tr></thead>
+              <thead><tr><th>Ensaio</th><th>Critério da norma</th><th data-pendente>Laudo</th></tr></thead>
               <tbody>
-                <tr><td class="model">Inspeção e dimensional</td><td>L ±50 mm; seção ±15 mm</td><td><span class="tbd">a preencher</span></td></tr>
-                <tr><td class="model">Flexão com carga nominal</td><td>Sem fissura; flecha ≤ 10% de L</td><td><span class="tbd">a preencher</span></td></tr>
-                <tr><td class="model">Carga excepcional 1,4 × Cn</td><td>Flecha residual ≤ 1% de L</td><td><span class="tbd">a preencher</span></td></tr>
-                <tr><td class="model">Ruptura 2 × Cn</td><td>Não pode romper</td><td><span class="tbd">a preencher</span></td></tr>
-                <tr><td class="model">Torção e momento fletor</td><td>Sem fissura ou deformação</td><td><span class="tbd">a preencher</span></td></tr>
-                <tr><td class="model">Torque M16</td><td>8 daN sem trinca</td><td><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Inspeção e dimensional</td><td>L ±50 mm; seção ±15 mm</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Flexão com carga nominal</td><td>Sem fissura; flecha ≤ 10% de L</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Carga excepcional 1,4 × Cn</td><td>Flecha residual ≤ 1% de L</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Ruptura 2 × Cn</td><td>Não pode romper</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Torção e momento fletor</td><td>Sem fissura ou deformação</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Torque M16</td><td>8 daN sem trinca</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
               </tbody>
             </table>
           </div>
@@ -113,20 +113,20 @@
             <h3>No material</h3>
             <div class="table-wrap">
             <table style="min-width:420px">
-              <thead><tr><th>Ensaio</th><th>Critério da norma</th><th>Laudo</th></tr></thead>
+              <thead><tr><th>Ensaio</th><th>Critério da norma</th><th data-pendente>Laudo</th></tr></thead>
               <tbody>
-                <tr><td class="model">Envelhecimento UV (2.000 h)</td><td>Variação ≤ ±25%; sem fibra exposta</td><td><span class="tbd">a preencher</span></td></tr>
-                <tr><td class="model">Flamabilidade (UL 94)</td><td>Classificação mínima V-1</td><td><span class="tbd">a preencher</span></td></tr>
-                <tr><td class="model">Propagação de chama</td><td>Extinção em até 30 s</td><td><span class="tbd">a preencher</span></td></tr>
-                <tr><td class="model">Trilhamento (NBR 10296)</td><td>Classe 2A 1,5 kV</td><td><span class="tbd">a preencher</span></td></tr>
-                <tr><td class="model">Dureza Barcol</td><td>≥ 30 em todos os pontos</td><td><span class="tbd">a preencher</span></td></tr>
-                <tr><td class="model">Absorção de água</td><td>NBR 5310, gravimétrico</td><td><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Envelhecimento UV (2.000 h)</td><td>Variação ≤ ±25%; sem fibra exposta</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Flamabilidade (UL 94)</td><td>Classificação mínima V-1</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Propagação de chama</td><td>Extinção em até 30 s</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Trilhamento (NBR 10296)</td><td>Classe 2A 1,5 kV</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Dureza Barcol</td><td>≥ 30 em todos os pontos</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
+                <tr><td class="model">Absorção de água</td><td>NBR 5310, gravimétrico</td><td data-pendente><span class="tbd">a preencher</span></td></tr>
               </tbody>
             </table>
           </div>
           </div>
         </div>
-        <p class="table-note muted">Cn = carga nominal. Os laudos serão anexados à medida que os ensaios forem concluídos.</p>
+        <p class="table-note muted">Cn = carga nominal.<span data-pendente> Os laudos serão anexados à medida que os ensaios forem concluídos.</span></p>
       </div>
     </section>
 
@@ -144,6 +144,6 @@
   </main>
 
   <div id="site-footer"></div>
-  <script src="js/site.js?v=20261007c"></script>
+  <script src="js/site.js?v=20261007d"></script>
 </body>
 </html>

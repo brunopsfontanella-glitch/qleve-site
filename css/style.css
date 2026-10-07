@@ -566,3 +566,4 @@ td.num { font-variant-numeric: tabular-nums; }
 .post-author img { width: 44px; height: auto; flex-shrink: 0; }
 .img-connect { height: auto; max-height: 560px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 45%; background: #2a6fd0; }
 @media (max-width: 899px) { .img-connect { aspect-ratio: 4 / 3; max-height: none; } }
+.publico [data-pendente], .publico .tbd:not([data-publico]) { display: none !important; }
